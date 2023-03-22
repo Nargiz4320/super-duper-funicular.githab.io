@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О курсе</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="index.html">
+            <img src="img/logo.svg" alt="logotype">
+        </a>
+       <nav> <ul class="menu">
+            <li class="menu_list"><a class="menu_link " href="index.html"> Главная</a></li>
+            <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
+            <li class="menu_list"><a class="menu_link menu_link_active" href="about.html"> О курсе</a></li>
+            <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+        <a class="button" href="#">Войти</a>
+    </header>
+    <div class="all"><main class="body_content_about">
+    <div class="content_about">
+        <h3 class="title" > О курсе &#128241;</h3>
+        <p class="subtitle-about">Посмотрите видео о нас</p>     
+        <video class="video" controls poster="img/video1.jpg" src="video/video-cats.mp4"></video>
+    </div></main></div>
+    <footer class="footer"> 
+       <p>2023 &copy;
+        <a class="link" href="#"> учебный центр </a> </p> 
+    </footer>   
+
+    <div class="pop_up">
+        <div class="pop_up_content">
+        <h2 class="heading_pop_up">
+            Войти на сайт
+        </h2>
+    
+        <input class="form login" type="text"   placeholder="Логин" required>
+        <input class="form password" type="text"   placeholder="Пароль" required>
+        <a class="button button_pop_up " href="#">Войти</a>
+        
+    </div></div>
+    
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const pop_upEl = document.querySelector('.pop_up');
+        
+    
+       buttonEl.addEventListener('click', function (e) {
+            pop_upEl.classList.toggle('visible')
+       });
+    </script>
+    
+</body>
+</html>

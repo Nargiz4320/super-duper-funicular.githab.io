@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студенты</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+    <header class="header">
+        <a class="logo" href="index.html">
+            <img src="img/logo.svg" alt="logotype">
+        </a>
+       <nav> <ul class="menu">
+            <li class="menu_list"><a class="menu_link" href="index.html"> Главная</a></li>
+            <li class="menu_list"><a class="menu_link menu_link_active" href="students.html"> Студенты</a></li>
+            <li class="menu_list"><a class="menu_link" href="about.html"> О курсе</a></li>
+            <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+        <a class="button" href="#">Войти</a>
+    </header>
+    <div class="all">
+        <main class="content_students">
+        <h3 class="title">Студенты потока 08.02.2020 👧👦</h3>
+        <div class="students">
+            <div class="student">
+                <img src="img/student1.jpg" alt="фото студента 1">
+                <p class="student_name" >Василий Иванов</p>
+            </div>
+            <div class="student">
+                <img src="img/student1.jpg" alt="фото студента 3">
+                <p class="student_name">Мария Александрова</p>
+                <p class="student_new">НОВИЧОК</p>
+            </div>
+            <div class="student">
+                <img src="img/student1.jpg" alt="фото студента 4">
+                <p class="student_name" >Мария Александрова</p>
+            </div>          
+            <div class="student">
+                <img src="img/student1.jpg" alt="фото студента 2">
+                <p class="student_name" >Василий Иванов</p>
+            </div>        
+            <div class="student">
+                <img src="img/student1.jpg" alt="фото студента 5">
+                <p class="student_name" >Василий Иванов</p>
+            </div>
+        </div>
+        </main></div>
+
+
+    <footer class="footer"> 
+       <p>2023 &copy;
+        <a class="link" href="#"> учебный центр </a> </p> 
+    </footer>   
+    <div class="pop_up">
+        <div class="pop_up_content">
+        <h2 class="heading_pop_up">
+            Войти на сайт
+        </h2>
+    
+        <input class="form login" type="text"   placeholder="Логин" required>
+        <input class="form password" type="text"   placeholder="Пароль" required>
+        <a class="button button_pop_up " href="#">Войти</a>
+        
+    </div></div>
+    
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const pop_upEl = document.querySelector('.pop_up');
+    
+       buttonEl.addEventListener('click', function (e) {
+            pop_upEl.classList.toggle('visible')
+       });
+    </script>
+</body>
+</html>
