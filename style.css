@@ -401,9 +401,9 @@ img {
 
 /* about */
 
-.body_content_about {
-    padding-left: calc(50% - 736px / 2);
-    padding-right: calc(50% - 736px / 2);
+.content_about {
+    padding-left: calc(50% - 739px / 2);
+    padding-right: calc(50% - 739px / 2);
 }
 
 .subtitle-about {
@@ -437,7 +437,7 @@ img {
 }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     /* Стили для мобилки */
 .header {
     padding-left: 0px;
@@ -465,8 +465,8 @@ img {
 }
 
 .body_content {
-    padding-left: calc(50% - 342px / 2);
-    padding-right: calc(50% - 342px / 2);
+    padding-left: calc(50% - 345px / 2);
+    padding-right: calc(50% - 345px / 2);
 }
 
 .title {
@@ -532,7 +532,7 @@ img {
     padding-right: calc(50% - 350px / 2);
 }
 
-.body_content_about {
+.content_about {
     padding-left: calc(50% - 342px / 2);
     padding-right: calc(50% - 342px / 2);
 }
