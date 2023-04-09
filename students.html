@@ -11,7 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
 </head>
+
+<header class="header_mob">
+    <img class="burger" src="img/menu.png" alt="меню">
+    <a class="button_mob" href="#">Войти</a></header>  
+    <nav> <ul class="menu menu_mobile">
+    <li class="menu_list"><a class="menu_link" href="index.html"> Главная</a><li>
+    <li class="menu_list"><a class="menu_link menu_link_active" href="students.html"> Студенты</a></li>
+    <li class="menu_list"><a class="menu_link" href="about.html"> О курсе</a></li>
+    <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+    </ul></nav>
+
     <header class="header">
         <a class="logo" href="index.html">
             <img src="img/logo.svg" alt="logotype">
@@ -24,18 +37,19 @@
         </ul></nav>
         <a class="button" href="#">Войти</a>
     </header>
+
     <div class="all">
         <main class="content_students">
-        <h3 class="title">Студенты потока 08.02.2020 👧👦</h3>
+        <h3 class="title title_students">Студенты потока 08.02.2020 👧👦</h3>
         <div class="students">
             <div class="student">
                 <img src="img/student1.jpg" alt="фото студента 1">
-                <p class="student_name" >Василий Иванов</p>
+                <p class="student_name">Василий Иванов</p>
             </div>
             <div class="student">
-                <img src="img/student1.jpg" alt="фото студента 3">
-                <p class="student_name">Мария Александрова</p>
-                <p class="student_new">НОВИЧОК</p>
+                 <a href="my_page.html"><img class="my_photo" src="img/my_photo.jpg" alt="фото студента 3"></a>
+                 <p class="student_name student_new"> <a class="my_name" href="my_page.html">Ковалёва Наргиз</a></p>
+               
             </div>
             <div class="student">
                 <img src="img/student1.jpg" alt="фото студента 4">
@@ -57,8 +71,10 @@
        <p>2023 &copy;
         <a class="link" href="#"> учебный центр </a> </p> 
     </footer>   
+
     <div class="pop_up">
         <div class="pop_up_content">
+            <img class="cross visible" src="img/cross.png" alt="закрыть">
         <h2 class="heading_pop_up">
             Войти на сайт
         </h2>
@@ -68,14 +84,43 @@
         <a class="button button_pop_up " href="#">Войти</a>
         
     </div></div>
+
+    <script>
+        const button_mobEl = document.querySelector('.button_mob');
+        const pop_up_mobEl = document.querySelector('.pop_up');
+         
+        button_mobEl.addEventListener('click', function (e) {
+            pop_up_mobEl.classList.toggle('visible')
+       });
+    </script>
+    
     
     <script>
         const buttonEl = document.querySelector('.button');
         const pop_upEl = document.querySelector('.pop_up');
-    
-       buttonEl.addEventListener('click', function (e) {
+         
+        buttonEl.addEventListener('click', function (e) {
             pop_upEl.classList.toggle('visible')
        });
     </script>
+    
+    <script>
+        const crossEl = document.querySelector('.cross');
+        const pop_up = document.querySelector('.pop_up');
+        
+        crossEl.addEventListener('click', function (e) {
+            pop_up.classList.toggle('visible')
+        });
+    </script>
+    
+    <script>
+        const burgerEl = document.querySelector('.burger');
+        const menu_mobileEl = document.querySelector('.menu_mobile');
+        
+        burgerEl.addEventListener('click', function (e) {
+            menu_mobileEl.classList.toggle('menu_show')
+        });
+    </script>
+    
 </body>
 </html>

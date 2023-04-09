@@ -10,9 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     
 </head>
 <body>
+
+    <header class="header_mob">
+        <img class="burger" src="img/menu.png" alt="меню">
+        <a class="button_mob" href="#">Войти</a></header>  
+        <nav> <ul class="menu menu_mobile">
+        <li class="menu_list"><a class="menu_link" href="index.html"> Главная</a><li>
+        <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
+        <li class="menu_list"><a class="menu_link" href="about.html"> О курсе</a></li>
+        <li class="menu_list"><a class="menu_link menu_link_active" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+
     <header class="header">
         <a class="logo" href="index.html">
             <img src="img/logo.svg" alt="logotype">
@@ -43,6 +56,7 @@
     
     <div class="pop_up">
         <div class="pop_up_content">
+            <img class="cross visible" src="img/cross.png" alt="закрыть">
         <h2 class="heading_pop_up">
             Войти на сайт
         </h2>
@@ -54,13 +68,42 @@
     </div></div>
     
     <script>
-        const buttonEl = document.querySelector('.button');
-        const pop_upEl = document.querySelector('.pop_up');    
+        const button_mobEl = document.querySelector('.button_mob');
+        const pop_up_mobEl = document.querySelector('.pop_up');
+         
+        button_mobEl.addEventListener('click', function (e) {
+            pop_up_mobEl.classList.toggle('visible')
+       });
+    </script>
     
-       buttonEl.addEventListener('click', function (e) {
+    
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const pop_upEl = document.querySelector('.pop_up');
+         
+        buttonEl.addEventListener('click', function (e) {
             pop_upEl.classList.toggle('visible')
        });
     </script>
+    
+    <script>
+        const crossEl = document.querySelector('.cross');
+        const pop_up = document.querySelector('.pop_up');
+        
+        crossEl.addEventListener('click', function (e) {
+            pop_up.classList.toggle('visible')
+        });
+    </script>
+    
+    <script>
+        const burgerEl = document.querySelector('.burger');
+        const menu_mobileEl = document.querySelector('.menu_mobile');
+        
+        burgerEl.addEventListener('click', function (e) {
+            menu_mobileEl.classList.toggle('menu_show')
+        });
+    </script>
+    
 
 </body>
 </html>

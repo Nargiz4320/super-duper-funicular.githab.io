@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+</head>
+
+<body> 
+
+    <header class="header_mob">
+        <img class="burger" src="img/menu.png" alt="меню">
+        <a class="button_mob" href="#">Войти</a></header>  
+        <nav> <ul class="menu menu_mobile">
+        <li class="menu_list"><a class="menu_link" href="index.html"> Главная</a><li>
+        <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
+        <li class="menu_list"><a class="menu_link menu_link_active" href="about.html"> О курсе</a></li>
+        <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+
+    <header class="header">
+        <a class="logo" href="index.html">
+            <img src="img/logo.svg" alt="logotype">
+        </a>
+       <nav> <ul class="menu">
+            <li class="menu_list"><a class="menu_link " href="index.html"> Главная</a></li>
+            <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
+            <li class="menu_list"><a class="menu_link menu_link_active" href="about.html"> О курсе</a></li>
+            <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+        <a class="button" href="#">Войти</a>
+    </header>
+      
+    <div class="all">
+    <div class="content_my_page"> 
+        <h1 class="title">Моя страница</h1>
+    <div class="content_text_my_page">        
+        <img class="my_photo_in_page" src="img/i.jpg" alt="моё фото">
+        <div class="info_my_page">
+             <p class="about_text text_about_me">
+                 Меня зовут Ковалёва Наргиз. Мне 30 лет. <br> 
+                 Живу в городе Новочеркасске (Ростовская область). Замужем. Есть двое детей.  Окончила университет по специальности «Товароведение». После обучения работала администратором в магазине нижнего белья. В декрете поняла, что хочу сменить сферу деятельности и вот я тут)
+                
+             <p class="subtitle subtitle_my_page">В свободное время:</p> 
+                 <div class="menu">                   
+                         <ul class="menu menu_my">
+                         <li class="menu_my_page" >Читаю книги <a class="link_my_page" target="_blank" href="https://www.litres.ru/"><img class="icon" src="img/litres.png" alt="иконка литрес"></a></li>
+                         <li class="menu_my_page">Смотрю фильмы <a class="link_my_page" target="_blank" href="https://www.kinopoisk.ru/"><img class="icon" src="img/kino.jpg" alt="иконка кинопоиск"></a></li>
+                         <li class="menu_my_page">Учу английский <a class="link_my_page" target="_blank" href="https://www.duolingo.com/"><img class="icon" src="img/duolingo.png" alt="иконка дуолинго"></a></li>
+                     </ul> 
+                 </div>
+                                </div>
+            </div></div>                      
+        </div>
+
+    <footer class="footer"> 
+        <p>2023 &copy;
+         <a class="link" href="#"> учебный центр </a> </p> 
+     </footer>   
+ 
+     <div class="pop_up">
+         <div class="pop_up_content">
+             <img class="cross visible" src="img/cross.png" alt="закрыть">
+         <h2 class="heading_pop_up">
+             Войти на сайт
+         </h2>
+     
+         <input class="form login" type="text"   placeholder="Логин" required>
+         <input class="form password" type="text"   placeholder="Пароль" required>
+         <a class="button button_pop_up " href="#">Войти</a>
+         
+     </div></div>
+ 
+     <script>
+         const button_mobEl = document.querySelector('.button_mob');
+         const pop_up_mobEl = document.querySelector('.pop_up');
+          
+         button_mobEl.addEventListener('click', function (e) {
+             pop_up_mobEl.classList.toggle('visible')
+        });
+     </script>
+     
+     <script>
+         const buttonEl = document.querySelector('.button');
+         const pop_upEl = document.querySelector('.pop_up');
+          
+         buttonEl.addEventListener('click', function (e) {
+             pop_upEl.classList.toggle('visible')
+        });
+     </script>
+     
+     <script>
+         const crossEl = document.querySelector('.cross');
+         const pop_up = document.querySelector('.pop_up');
+         
+         crossEl.addEventListener('click', function (e) {
+             pop_up.classList.toggle('visible')
+         });
+     </script>
+     
+     <script>
+         const burgerEl = document.querySelector('.burger');
+         const menu_mobileEl = document.querySelector('.menu_mobile');
+         
+         burgerEl.addEventListener('click', function (e) {
+             menu_mobileEl.classList.toggle('menu_show')
+         });
+     </script>
+        
+    
+    
+
+    
+
+    
+    
+    
+
+   
+</body>
+
+</html>
