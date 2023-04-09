@@ -67,6 +67,11 @@ img {
     color: #FFFFFF;
 }
 
+.button:hover {
+    background: #cc511d;
+    color:#dfdddd;
+}
+
 .body_content {
     padding-left: calc(50% - 911px / 2);
     padding-right: calc(50% - 911px / 2);
