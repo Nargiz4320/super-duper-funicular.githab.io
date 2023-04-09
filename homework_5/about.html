@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О курсе</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    
+</head>
+
+<body>
+
+    <header class="header_mob">
+        <img class="burger" src="img/menu.png" alt="меню">
+        <a class="button_mob" href="#">Войти</a></header>  
+        <nav> <ul class="menu menu_mobile">
+        <li class="menu_list"><a class="menu_link" href="index.html"> Главная</a><li>
+        <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
+        <li class="menu_list"><a class="menu_link menu_link_active" href="about.html"> О курсе</a></li>
+        <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+
+    <header class="header">
+        <a class="logo" href="index.html">
+            <img src="img/logo.svg" alt="logotype">
+        </a>
+       <nav> <ul class="menu">
+            <li class="menu_list"><a class="menu_link " href="index.html"> Главная</a></li>
+            <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
+            <li class="menu_list"><a class="menu_link menu_link_active" href="about.html"> О курсе</a></li>
+            <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
+        </ul></nav>
+        <a class="button" href="#">Войти</a>
+    </header>
+    <div class="all">
+    <main class="content_about">
+        <h3 class="title" > О курсе</h3>
+        <p class="subtitle-about">Посмотрите видео о нас</p>     
+        <video class="video" controls poster="img/video1.jpg" src="video/video_cat.mp4"></video>
+    </main> </div>
+
+    <footer class="footer"> 
+       <p>2023 &copy;
+        <a class="link" href="#"> учебный центр </a> </p> 
+    </footer>   
+
+    <div class="pop_up">
+        <div class="pop_up_content">
+            <img class="cross visible" src="img/cross.png" alt="закрыть">
+        <h2 class="heading_pop_up">
+            Войти на сайт
+        </h2>
+    
+        <input class="form login" type="text"   placeholder="Логин" required>
+        <input class="form password" type="text"   placeholder="Пароль" required>
+        <a class="button button_pop_up " href="#">Войти</a>
+        
+    </div></div>
+
+    <script>
+        const button_mobEl = document.querySelector('.button_mob');
+        const pop_up_mobEl = document.querySelector('.pop_up');
+         
+        button_mobEl.addEventListener('click', function (e) {
+            pop_up_mobEl.classList.toggle('visible')
+       });
+    </script>
+    
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const pop_upEl = document.querySelector('.pop_up');
+         
+        buttonEl.addEventListener('click', function (e) {
+            pop_upEl.classList.toggle('visible')
+       });
+    </script>
+    
+    <script>
+        const crossEl = document.querySelector('.cross');
+        const pop_up = document.querySelector('.pop_up');
+        
+        crossEl.addEventListener('click', function (e) {
+            pop_up.classList.toggle('visible')
+        });
+    </script>
+    
+    <script>
+        const burgerEl = document.querySelector('.burger');
+        const menu_mobileEl = document.querySelector('.menu_mobile');
+        
+        burgerEl.addEventListener('click', function (e) {
+            menu_mobileEl.classList.toggle('menu_show')
+        });
+    </script>
+       
+</body>
+</html>

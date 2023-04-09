@@ -245,6 +245,7 @@ img {
     width: 200px;
     height: 270px;
     display: inline-block;
+    object-fit: cover;
 }
 
 .my_photo:hover {
@@ -921,7 +922,7 @@ img {
 
 .pop_up  {
     left: calc(50% - 376px / 2);
-    top: 142px;
+    top: 76px;
 }
 
 .button_pop_up {
@@ -936,7 +937,7 @@ img {
 
 .pop_up  {
      left: calc(50% - 342px / 2);
-     top: 178px;
+     top: 76px;
 }
 }
 
